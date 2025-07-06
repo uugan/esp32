@@ -31,6 +31,8 @@ The **server node** connects to WiFi & Blynk, forwards data to Blynk, and relays
 - Jumper wires, breadboard or PCB
 
 ![ESP32 with LoRa module](images/circuit.png)
+
+![ESP32 with LoRa module](images/on_off.gif)
 ---
 
 

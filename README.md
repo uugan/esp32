@@ -37,13 +37,14 @@ Here is the Blynk dashboard:
 
 
 ## 📁 File Structure
+```bash
 .
 ├── client.ino         # LoRa client (sensor) code
 ├── server.ino         # LoRa server (WiFi & Blynk) code
 ├── secret.h            # WiFi & Blynk credentials (not tracked in git)
 ├── .gitignore          # ignores secret.h and build artifacts
 ├── README.md           # this file
-
+```
 ---
 
 ## 🔒 Secrets
@@ -58,21 +59,16 @@ Create a `secret.h` file in the project folder (excluded from git) with:
 #define WIFI_SSID     "YourWifiSSID"
 #define WIFI_PASSWORD "YourWifiPassword"
 ```
-🚀 Getting Started
+## 🚀 Getting Started
 On the client node:
 Flash client.ino to ESP32 #1.
-
 Connect LoRa module & sensor.
-
 Power it on.
 
 On the server node:
 Flash server.ino to ESP32 #2.
-
 Connect LoRa module.
-
 Make sure secret.h is configured with your WiFi & Blynk credentials.
-
 Power it on.
 
 On Blynk:

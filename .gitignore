@@ -1,0 +1,11 @@
+# Ignore secrets
+secret.h
+
+# Ignore build and backup files
+*.hex
+*.bin
+*.bak
+
+# OS-generated files
+.DS_Store
+Thumbs.db

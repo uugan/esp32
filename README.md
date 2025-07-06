@@ -37,12 +37,12 @@ Here is the Blynk dashboard:
 
 
 ## 📁 File Structure
-
-├── client.ino # LoRa client (sensor) code
-├── server.ino # LoRa server (WiFi & Blynk) code
-├── secret.h # WiFi & Blynk credentials (not tracked in git)
-├── .gitignore # ignores secret.h and build artifacts
-├── README.md # this file
+.
+├── client.ino         # LoRa client (sensor) code
+├── server.ino         # LoRa server (WiFi & Blynk) code
+├── secret.h            # WiFi & Blynk credentials (not tracked in git)
+├── .gitignore          # ignores secret.h and build artifacts
+├── README.md           # this file
 
 ---
 
@@ -57,7 +57,7 @@ Create a `secret.h` file in the project folder (excluded from git) with:
 
 #define WIFI_SSID     "YourWifiSSID"
 #define WIFI_PASSWORD "YourWifiPassword"
-
+```
 🚀 Getting Started
 On the client node:
 Flash client.ino to ESP32 #1.

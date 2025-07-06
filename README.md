@@ -19,7 +19,6 @@ The **server node** connects to WiFi & Blynk, forwards data to Blynk, and relays
 - Sends data to Blynk every 15 minutes
 - Receives commands from Blynk and forwards them to client over LoRa
 
-Here is the Blynk dashboard:
 ![Blynk Dashboard](images/dashboard.png)
 ---
 
@@ -39,17 +38,18 @@ Here is the Blynk dashboard:
 ## 📁 File Structure
 ```bash
 .
-├── client.ino         # LoRa client (sensor) code
-├── server.ino         # LoRa server (WiFi & Blynk) code
-├── secret.h            # WiFi & Blynk credentials (not tracked in git)
+├── lora_client/lora_client.ino         # LoRa client (sensor) code
+├── lora_server/lora_server.ino         # LoRa server (WiFi & Blynk) code
+├── lora_server/secret.h            # WiFi & Blynk credentials (not tracked in git)
 ├── .gitignore          # ignores secret.h and build artifacts
 ├── README.md           # this file
+├── LICENSE             # license file
 ```
 ---
 
 ## 🔒 Secrets
 
-Create a `secret.h` file in the project folder (excluded from git) with:
+Create a `secret.h` file in the lora server project folder (excluded from git) with:
 ```cpp
 
 #define BLYNK_TEMPLATE_ID "YourTemplateId"
@@ -61,22 +61,29 @@ Create a `secret.h` file in the project folder (excluded from git) with:
 ```
 ## 🚀 Getting Started
 On the client node:
+```
 Flash client.ino to ESP32 #1.
 Connect LoRa module & sensor.
 Power it on.
 
+```
+
 On the server node:
+```
 Flash server.ino to ESP32 #2.
 Connect LoRa module.
 Make sure secret.h is configured with your WiFi & Blynk credentials.
+
 Power it on.
+```
 
 On Blynk:
+```
 Create a new project.
-
 Add widgets for temperature, humidity, and buttons to control relay.
-
 Use the auth token in secret.h.
+```
+
 
 📖 License
 MIT License © uugan
